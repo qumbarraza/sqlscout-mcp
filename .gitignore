@@ -1,0 +1,12 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Local secrets / per-user config must never be committed
+.env
+.sqlscout/

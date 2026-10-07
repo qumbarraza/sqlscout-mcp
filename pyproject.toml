@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sqlscout-mcp"
+version = "0.1.0"
+description = "Read-only SQL Server MCP server for Claude Code. Auto-discovers local instances (Windows) and lets you add more servers by host or connection string."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+keywords = ["mcp", "claude", "sql-server", "mssql", "read-only"]
+classifiers = [
+    "Operating System :: Microsoft :: Windows",
+    "Programming Language :: Python :: 3",
+    "Topic :: Database",
+]
+dependencies = [
+    "pyodbc>=5.0",
+    "sqlparse>=0.5",
+    "mcp>=1.2,<2",
+    "keyring>=24",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+sqlscout = "sqlscout.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sqlscout"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
