@@ -13,13 +13,13 @@ Prerequisites: Windows, Python 3.10+, and the [ODBC Driver 18 for SQL Server](ht
 With [uv](https://docs.astral.sh/uv/) (recommended, nothing to clone or activate):
 
 ```bash
-claude mcp add sqlscout --scope user -- uvx --from git+https://github.com/<your-github-user>/sqlscout-mcp sqlscout serve
+claude mcp add sqlscout --scope user -- uvx --from git+https://github.com/qumbarraza/sqlscout-mcp sqlscout serve
 ```
 
 Or with pip:
 
 ```bash
-pip install git+https://github.com/<your-github-user>/sqlscout-mcp
+pip install git+https://github.com/qumbarraza/sqlscout-mcp
 claude mcp add sqlscout --scope user -- sqlscout serve
 ```
 
